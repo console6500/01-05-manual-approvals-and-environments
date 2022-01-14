@@ -1,0 +1,19 @@
+
+name: CI
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  development:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - name: Deploy to the development environment
+        run: echo Deploying to ${{ job.development.environment }}
+  production:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy to the development environment
+        run: echo Deploying to ${{ job.development.environment }}
