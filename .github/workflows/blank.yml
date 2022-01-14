@@ -17,5 +17,5 @@ jobs:
     environment: production
     needs: development
     steps:
-      - name: Deploy to the development environment
+      - name: Deploy to the production environment
         run: echo "Insert deployment steps below..."
