@@ -10,10 +10,12 @@ jobs:
     environment: development
     steps:
       - name: Deploy to the development environment
-        run: echo Deploying to ${{ job.development.environment }}
+        run: echo "Insert deployment steps below..."
+  
   production:
     runs-on: ubuntu-latest
     environment: production
+    needs: development
     steps:
       - name: Deploy to the development environment
-        run: echo Deploying to ${{ job.development.environment }}
+        run: echo "Insert deployment steps below..."
